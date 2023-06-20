@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import { ScreenSizeProvider } from './components/screen_size_context';
 
@@ -10,9 +10,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <ScreenSizeProvider>
-      <BrowserRouter>
+      <Router>
         <App />
-      </BrowserRouter>
+      </Router>
     </ScreenSizeProvider>
   </React.StrictMode>
 );
