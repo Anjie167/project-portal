@@ -15,11 +15,42 @@ import { useScreenSize } from '../screen_size_context';
 
 function ApplicationScreen() {
 
-    const options = [
+    const titleOptions = [
         { value: "mr", label: "Mr." },
         { value: "mrs", label: "Mrs." },
     ];
 
+    const formAddressOptions = [
+        { value: "a", label: "Option 1" },
+        { value: "b", label: "Option 2" },
+    ];
+    const teleOptions = [
+        { value: "GER", label: "+966" },
+        { value: "NG", label: "+234" },
+        { value: "IN", label: "+91" },
+    ];
+
+    const countryOptions = [
+        { value: "GER", label: "Germany" },
+        { value: "ENG", label: "England" },
+    ];
+
+    const sexOptions = [
+        { value: "m", label: "Male" },
+        { value: "f", label: "Female" },
+        { value: "none", label: "Other" },
+    ];
+
+    const trainingOptions = [
+        { value: "a", label: "Option 1" },
+        { value: "b", label: "Option 2" },
+    ];
+
+    const maritalOptions = [
+        { value: "a", label: "Married" },
+        { value: "b", label: "Dating" },
+        { value: "c", label: "Single" },
+    ];
 
     const [title, setTitle] = useState("");
     const [c_o, setC_o] = useState("");
@@ -59,7 +90,7 @@ function ApplicationScreen() {
                         {isLargeScreen
                             ? (<Column mainAxisAlignment="spaceBetween">
                                 <Row mainAxisAlignment="spaceBetween">
-                                    <DropDown label="Title" value={title} onChange={setTitle} options={options} />
+                                    <DropDown label="Title" value={title} onChange={setTitle} options={titleOptions} />
                                     <TextField label="C/O" value={c_o} onChange={(e) => setC_o(e)} />
                                 </Row>
                                 <Row mainAxisAlignment="spaceBetween">
@@ -67,7 +98,7 @@ function ApplicationScreen() {
                                         label="Form of Address"
                                         value={formOfAddress}
                                         onChange={setFormOfAddress}
-                                        options={options}
+                                        options={formAddressOptions}
                                     />
                                     <TextField label="Street and House No" value={streetHouseNo} onChange={(e) => setStreetHouseNo(e)} />
 
@@ -93,20 +124,20 @@ function ApplicationScreen() {
                                 </Row>
 
                                 <Row mainAxisAlignment="start">
-                                    <DropDown align="" space="25%" label="Telephone" value={telephone} onChange={setTelephone} options={options} width="300px" />
-                                    <TextField value={c_o} onChange={(e) => setC_o(e)} hintText="+91" width="540px" />
+                                    <DropDown align="" space="25%" label="Telephone" value={telephone} onChange={setTelephone} options={teleOptions} width="300px" />
+                                    <TextField value={c_o} onChange={(e) => setC_o(e)} hintText="Enter phone number" width="540px" />
                                 </Row>
 
                             </Column>) :
                             (
                                 <Column mainAxisAlignment="spaceBetween">
-                                    <DropDown label="Title" value={title} onChange={setTitle} options={options} />
+                                    <DropDown label="Title" value={title} onChange={setTitle} options={titleOptions} />
                                     <TextField label="C/O" value={c_o} onChange={(e) => setC_o(e)} />
                                     <DropDown
                                         label="Form of Address"
                                         value={formOfAddress}
                                         onChange={setFormOfAddress}
-                                        options={options}
+                                        options={formAddressOptions}
                                     />
                                     <TextField label="Street and House No" value={streetHouseNo} onChange={(e) => setStreetHouseNo(e)} />
                                     <TextField label="First Name" value={firstName} onChange={(e) => setFirstName(e)} />
@@ -116,8 +147,8 @@ function ApplicationScreen() {
                                     <TextField label="Surname" value={surname} onChange={(e) => setSurname(e)} />
                                     <TextField label="Town" value={town} onChange={(e) => setTown(e)} />
                                     <Row>
-                                        <DropDown align="" space="25%" label="Telephone" value={telephone} onChange={setTelephone} options={options} width="300px" />
-                                        <TextField value={c_o} onChange={(e) => setC_o(e)} hintText="+91" width="540px" />
+                                        <DropDown align="" space="25%" label="Telephone" value={telephone} onChange={setTelephone} options={teleOptions} width="300px" />
+                                        <TextField value={c_o} onChange={(e) => setC_o(e)} hintText="Enter phone number" width="540px" />
                                     </Row>
                                 </Column>
                             )
@@ -137,15 +168,15 @@ function ApplicationScreen() {
                                         label="Country"
                                         value={country}
                                         onChange={setCountry}
-                                        options={options}
+                                        options={countryOptions}
                                     />
-                                    <DropDown label="Sex" value={sex} onChange={setSex} options={options} />
-                                    <DropDown label="Training" value={training} onChange={setTraining} options={options} />
+                                    <DropDown label="Sex" value={sex} onChange={setSex} options={sexOptions} />
+                                    <DropDown label="Training" value={training} onChange={setTraining} options={trainingOptions} />
                                     <DropDown
                                         label="Marital Status"
                                         value={maritalStatus}
                                         onChange={setMaritalStatus}
-                                        options={options}
+                                        options={maritalOptions}
                                     />
 
                                 </Column>
@@ -166,15 +197,15 @@ function ApplicationScreen() {
                                             label="Country"
                                             value={country}
                                             onChange={setCountry}
-                                            options={options}
+                                            options={countryOptions}
                                         />
-                                        <DropDown label="Sex" value={sex} onChange={setSex} options={options} />
-                                        <DropDown label="Training" value={training} onChange={setTraining} options={options} />
+                                        <DropDown label="Sex" value={sex} onChange={setSex} options={sexOptions} />
+                                        <DropDown label="Training" value={training} onChange={setTraining} options={trainingOptions} />
                                         <DropDown
                                             label="Marital Status"
                                             value={maritalStatus}
                                             onChange={setMaritalStatus}
-                                            options={options}
+                                            options={maritalOptions}
                                         />
 
                                     </Column>

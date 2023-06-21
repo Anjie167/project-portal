@@ -32,12 +32,13 @@ const LanguageSelector = () => {
     };
 
     const optionsStyle = {
-        width: '50px',
+        width: '100px',
+        height: '120px',
         padding: "5px",
-        backgroungColor: "white",
+        borderRadius: "5px",
         listStyleType: 'none',
         position: "absolute",
-        margin: 0,
+        backgroundColor: "white"
     };
 
     const optionItemStyle = {
