@@ -1,7 +1,7 @@
 import { useScreenSize } from '../screen_size_context';
 
 
-function AppTemplate({ children, text, cross, alignment }) {
+function AppTemplate({ children, text, cross, alignment , width}) {
     const { isSmallScreen, isMediumScreen } = useScreenSize();
 
     return (
@@ -14,9 +14,9 @@ function AppTemplate({ children, text, cross, alignment }) {
             width: isSmallScreen ? "760px" : isMediumScreen ? "1024px" :"100%",
         }}>
             <div style={{
-                backgroundColor: "black", width: "100%", display: "flex", flexDirection: "row", alignItems: "center", paddingBottom: isSmallScreen ? "20px" : "40px", paddingTop: isSmallScreen ? "30px" : "60px"
+                backgroundColor: "black", width: width ?? "100%", display: "flex", flexDirection: "row", alignItems: "center", paddingBottom: isSmallScreen ? "20px" : "30px", paddingTop: isSmallScreen ? "30px" : "30px"
             }}>
-                < p style={{ fontSize: isSmallScreen ? "17px" : (isMediumScreen ? "20px" : "25px"), fontWeight: "bold", color: "white", paddingLeft: "20px" }} >{text ?? "American Dream"}</p>
+                < p style={{ fontSize: isSmallScreen ? "17px" : (isMediumScreen ? "20px" : "25px"), fontWeight: "bold", color: "white", paddingLeft: "20px" }} >{text ?? "Green Card"}</p>
             </div >
             {children}
         </div >

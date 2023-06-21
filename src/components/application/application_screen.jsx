@@ -50,12 +50,12 @@ function ApplicationScreen() {
 
 
     return (
-        <AppTemplate>
+        <AppTemplate width={"1700px"}>
             <div style={{ justifyContent: "center", width: isSmallScreen ? "760px" : isMediumScreen ? "1000px" : "100%" }}>
                 <form onSubmit={handleSubmit}>
                     {/* Personal Details Section */}
                     <h2 style={{ paddingLeft: "2%" }}>Personal Details</h2>
-                    <Container color={kLightGrey} height={isLargeScreen ? "500px" : "800px"} borderRadius="10px" width={isSmallScreen ? "700px" : isMediumScreen ? "900px" : "92%"} margin="2%" padding="2%">
+                    <Container height={isLargeScreen ? "500px" : "800px"} borderRadius="10px" width={isSmallScreen ? "700px" : isMediumScreen ? "900px" : "92%"} margin="2%" padding="2%">
                         {isLargeScreen
                             ? (<Column mainAxisAlignment="spaceBetween">
                                 <Row mainAxisAlignment="spaceBetween">

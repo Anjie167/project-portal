@@ -33,8 +33,9 @@ const LanguageSelector = () => {
 
     const optionsStyle = {
         width: '50px',
+        padding: "5px",
+        backgroungColor: "white",
         listStyleType: 'none',
-        padding: 0,
         position: "absolute",
         margin: 0,
     };
